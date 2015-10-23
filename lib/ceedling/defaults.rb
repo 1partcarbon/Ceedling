@@ -10,6 +10,7 @@ DEFAULT_TEST_COMPILER_TOOL = {
   :background_exec => BackgroundExec::NONE.freeze,
   :optional => false.freeze,
   :arguments => [
+    "-std=c99".freeze,
     {"-I\"$\"" => 'COLLECTION_PATHS_TEST_SUPPORT_SOURCE_INCLUDE_VENDOR'}.freeze,
     {"-I\"$\"" => 'COLLECTION_PATHS_TEST_TOOLCHAIN_INCLUDE'}.freeze,
     {"-D$" => 'COLLECTION_DEFINES_TEST_AND_VENDOR'}.freeze,
@@ -17,7 +18,6 @@ DEFAULT_TEST_COMPILER_TOOL = {
     "-g".freeze,
     "-c \"${1}\"".freeze,
     "-o \"${2}\"".freeze,
-    "-std=c99".freeze,
     # gcc's list file output options are complex; no use of ${3} parameter in default config
     ].freeze
   }
