@@ -17,7 +17,7 @@ DEFAULT_TEST_COMPILER_TOOL = {
     "-g".freeze,
     "-c \"${1}\"".freeze,
     "-o \"${2}\"".freeze,
-    "\"${3}\"".freeze,
+    "\"${4}\"".freeze,
     # gcc's list file output options are complex; no use of ${3} parameter in default config
     ].freeze
   }
