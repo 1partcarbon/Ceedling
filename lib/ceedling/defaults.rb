@@ -17,6 +17,7 @@ DEFAULT_TEST_COMPILER_TOOL = {
     "-g".freeze,
     "-c \"${1}\"".freeze,
     "-o \"${2}\"".freeze,
+    "-std=c99".freeze,
     # gcc's list file output options are complex; no use of ${3} parameter in default config
     ].freeze
   }
@@ -107,7 +108,7 @@ DEFAULT_TEST_DEPENDENCIES_GENERATOR_TOOL = {
     "-DGNU_COMPILER".freeze,
     "-MT \"${3}\"".freeze,
     '-MM'.freeze,
-    MD_FLAG.freeze, 
+    MD_FLAG.freeze,
     '-MG'.freeze,
     "-MF \"${2}\"".freeze,
     "-c \"${1}\"".freeze,
@@ -130,7 +131,7 @@ DEFAULT_RELEASE_DEPENDENCIES_GENERATOR_TOOL = {
     "-DGNU_COMPILER".freeze,
     "-MT \"${3}\"".freeze,
     '-MM'.freeze,
-    MD_FLAG.freeze, 
+    MD_FLAG.freeze,
     '-MG'.freeze,
     "-MF \"${2}\"".freeze,
     "-c \"${1}\"".freeze,
